@@ -2,5 +2,47 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
 
+body {
+    padding: 1rem 2rem;
+}
+
+.mywork{
+    display: grid;
+    grid-template-columns: repeat(autofill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.mywork .work {
+    display: grid;
+    min-width: 300px;
+    box-shadow: 1px 2px 2px 2px gray;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+.mywork .work:hover {
+    transition: background-color .75s ease-in-out 0.25s;
+    background-color: blue;
+    color: white;
+   /*  transform: scale(0.95); */
+}
+
+.mywork .work .info {
+    display: grid;
+}
+
+.info  .info__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info .info__description p {
+   font-size: 18px;
+}
+footer {
+    height: 100px;
 }
