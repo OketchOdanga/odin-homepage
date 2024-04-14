@@ -9,8 +9,10 @@ body {
     font-size: 18px;
 }
 /* SVGS */
-svg,
 i {
+    font-size: 3rem;
+}
+svg{
     height: 3rem;
     width: 3rem;
 }
