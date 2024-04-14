@@ -9,7 +9,8 @@ body {
     font-size: 18px;
 }
 /* SVGS */
-svg {
+svg,
+i {
     height: 3rem;
     width: 3rem;
 }
@@ -27,7 +28,7 @@ a {
 /* HEADER */
 header {
     margin-bottom: 4rem;
-    height: 55vh;
+    height: 75vh;
     padding: 2rem;
 }
 .myImage {
@@ -41,7 +42,7 @@ header {
     display: grid;
     gap: 10px;
     padding: 1rem;
-    box-shadow: 2px 2px 2px 2px lightgray;
+    box-shadow: 1px 2px 2px 2px lightgray;
 }
 
 .about .socialmedia {
@@ -49,7 +50,7 @@ header {
 }
 
 main {
-    padding: 2rem;
+    padding: 1rem;
 }
 
 .mywork{
@@ -63,20 +64,17 @@ main {
 .mywork .work {
     display: grid;
     min-width: 300px;
-    box-shadow: 1px 2px 2px 2px gray;
+    box-shadow: 1px 2px 2px 2px lightgray;
     background-color: white;
     color: black;
     cursor: pointer;
     flex-grow: 1;
 }
 
-.mywork .work:hover {
-    transition: background-color .75s ease-in-out 0.25s;
-    background-color: blue;
-    color: white;
-   /*  transform: scale(0.95); */
+.work-image {
+    background-color: black;
+    height: 20rem;
 }
-
 .mywork .work .info {
     display: grid;
     padding: 0.75rem;
@@ -92,24 +90,33 @@ main {
    font-size: 18px;
 }
 footer {
-    display: flex;
     background-color: rgb(21, 142, 218);
     color: white;
     padding: 2rem;
-    gap: 3.5rem;
 }
 
 footer .contact {
     display: grid;
     gap: 1rem;
+    justify-content: center;
 }
 
+footer h2 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+footer p {
+    font-size: 1.5rem;
+}
 footer img {
     height: 2rem;
     width: 2rem;
 }
 
-footer svg {
+footer svg,
+footer i {
     height: 3rem;
     width: 3rem;
 }
@@ -129,7 +136,7 @@ footer .myImage {
 
 /* ||MEDIA QUERIES */
 
-@media screen and (max-width:425px) {
+@media screen and (max-width:649px) {
     header {
         display: grid;
         height: 100%;
@@ -150,22 +157,26 @@ footer .myImage {
         justify-self: center;
     }
 
-    footer h2 {
-        text-align: center;
-        font-size: 3rem;
-        font-weight: 400;
-    }
-
-    footer p {
-        font-size: 1.5rem;
-    }
 }
 
 /* ||TABLETS */
 
-@media screen  and(min-width:500px) and (max-width: 1023px){
+@media (min-width:650px) and (max-width: 1023px){
+    header {
+        height: 100%;
+    }
     .mywork {
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+    }
+}
+
+@media (min-width: 1024px) {
+    .mywork {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
     }
 }
 
